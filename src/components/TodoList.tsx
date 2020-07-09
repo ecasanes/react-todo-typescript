@@ -11,7 +11,7 @@ export default function TodoList({list}:TodoListProps) {
         <div id="todo-list">
             <h2>Todo List</h2>
             <ul>
-                {list.map((todo: Todo) => <li key={todo.id}>{todo.description}</li>)}
+                {list.map((todo: Todo, index) => <li key={index}>{todo.description}</li>)}
             </ul>
         </div>
     )
