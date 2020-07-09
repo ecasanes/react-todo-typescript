@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import DoneList from './components/DoneList';
 import TodoInput from './components/TodoInput';
@@ -45,7 +45,7 @@ function App() {
 
   const todoListArr: Todo[] = [
     new Todo('Send an Email'),
-    new Todo('Wash the Dishes')
+    new Todo('Wash the Dishes', true)
   ]
   
   const [todos, setTodos] = useState(todoListArr);
@@ -54,12 +54,16 @@ function App() {
     setTodos([todo, ...todos])
   }
 
+  useEffect(() =>{
+    console.log('app todos: ', todos);
+  }, [todos])
+
   return (
     <div>
       <Header/>
       <TodoInput list={todos} addTodo={addTodo}/>
-      <TodoList list={todos}/>
-      <DoneList list={todos}/>
+      <TodoList list={todos} setTodos={setTodos}/>
+      <DoneList list={todos} setTodos={setTodos}/>
     </div>
   );
 }
