@@ -2,11 +2,10 @@ import React from 'react';
 import {Todo} from '../App';
 
 interface DoneListProps {
-    list: Todo[],
-    setTodos(todos: Todo[]): void
+    list: Todo[]
 }
 
-export default function DoneList({list, setTodos}:DoneListProps) {
+export default function DoneList({list}:DoneListProps) {
 
     let doneList: Todo[] = list.filter((todo: Todo) => {
         return todo.isDone;

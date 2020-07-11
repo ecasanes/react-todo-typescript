@@ -55,7 +55,7 @@ function App() {
       <Header/>
       <TodoInput list={todos} addTodo={addTodo}/>
       <TodoList list={todos} setTodos={setTodos}/>
-      <DoneList list={todos} setTodos={setTodos}/>
+      <DoneList list={todos}/>
     </div>
   );
 }
