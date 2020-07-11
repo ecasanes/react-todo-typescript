@@ -13,7 +13,7 @@ export default function DoneList({list}:DoneListProps) {
 
     return (
         <div id="done-list">
-            <h2>Done</h2>
+            <h2 className="title">Done</h2>
             <ul>
                 {doneList.map((todo: Todo, index) => {
                     console.log(index + ': ' + todo.isDone);

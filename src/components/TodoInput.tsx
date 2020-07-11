@@ -27,7 +27,8 @@ export default function TodoInput({addTodo, list}:TodoInputProps) {
     }
 
     return (
-        <form id="todo-form" onSubmit={submitTodo}>
+        <form id="todo-input" onSubmit={submitTodo}>
+            <p>What do you want to do?</p>
             <input type="text" name="todo" value={todo.description} onChange={handleTodoChange} />
             <button type="submit">Add</button>
         </form>

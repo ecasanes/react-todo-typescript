@@ -24,10 +24,10 @@ export class Todo implements ITodo {
   description: string;
   isDone: boolean;
 
-  constructor(description: string = '', isDone: boolean = false){
-      this.id = uuid();
-      this.description = description;
-      this.isDone = isDone;
+  constructor(description: string = '', isDone: boolean = false) {
+    this.id = uuid();
+    this.description = description;
+    this.isDone = isDone;
   }
 
 
@@ -39,23 +39,27 @@ function App() {
     new Todo('Send an Email'),
     new Todo('Wash the Dishes')
   ]
-  
+
   const [todos, setTodos] = useState(todoListArr);
-  
+
   function addTodo(todo: Todo) {
     setTodos([todo, ...todos])
   }
 
-  useEffect(() =>{
+  useEffect(() => {
     console.log('app todos: ', todos);
   }, [todos])
 
   return (
     <div>
-      <Header/>
-      <TodoInput list={todos} addTodo={addTodo}/>
-      <TodoList list={todos} setTodos={setTodos}/>
-      <DoneList list={todos}/>
+      <Header />
+      <TodoInput list={todos} addTodo={addTodo} />
+      <div id="todo-list-container" className="list-container">
+        <TodoList list={todos} setTodos={setTodos} />
+      </div>
+      <div id="done-list-container" className="list-container">
+        <DoneList list={todos} />
+      </div>
     </div>
   );
 }
