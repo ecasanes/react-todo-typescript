@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {Todo} from '../App';
 
 interface DoneListProps {
@@ -8,21 +8,19 @@ interface DoneListProps {
 
 export default function DoneList({list, setTodos}:DoneListProps) {
 
-    // useEffect(() => {
-    //     console.log('done list: ', list);
-    // }, [list])
+    let doneList: Todo[] = list.filter((todo: Todo) => {
+        return todo.isDone;
+    });
 
     return (
         <div id="done-list">
-            <h2>Todo List</h2>
+            <h2>Done</h2>
             <ul>
-                {list.map((todo: Todo, index) => {
+                {doneList.map((todo: Todo, index) => {
                     console.log(index + ': ' + todo.isDone);
                     return (
-                        <li key={index}>
-                            <input type="checkbox" defaultChecked={todo.isDone} onChange={e => {
-                                console.log('onchange triggered');
-                            }} />
+                        <li key={index} style={{textDecoration:'line-through', fontStyle:'italic'}}>
+                            <input type="checkbox" defaultChecked={todo.isDone} disabled/>
                             {todo.description}
                         </li>
                     )

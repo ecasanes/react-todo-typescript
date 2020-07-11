@@ -45,7 +45,7 @@ function App() {
 
   const todoListArr: Todo[] = [
     new Todo('Send an Email'),
-    new Todo('Wash the Dishes', true)
+    new Todo('Wash the Dishes')
   ]
   
   const [todos, setTodos] = useState(todoListArr);

@@ -8,7 +8,9 @@ interface TodoListProps {
 
 export default function TodoList({list, setTodos}:TodoListProps) {
 
-    console.log('list before update', list);
+    const todoList = list.filter((todo: Todo) => {
+        return !todo.isDone;
+    })
 
     function updateChecked(index: number, todo: Todo){
         const newList = list.map(l => Object.assign({}, l));
@@ -21,9 +23,9 @@ export default function TodoList({list, setTodos}:TodoListProps) {
 
     return (
         <div id="todo-list">
-            <h2>Todo List</h2>
+            <h2>Todo</h2>
             <ul>
-                {list.map((todo: Todo, index) => {
+                {todoList.map((todo: Todo, index) => {
                     return (
                         <li key={index}>
                             <input type="checkbox" defaultChecked={todo.isDone} onChange={(e) => {
