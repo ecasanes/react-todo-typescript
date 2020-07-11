@@ -22,7 +22,7 @@ export default function TodoList({list, setTodos}:TodoListProps) {
     }
 
     return (
-        <div id="todo-list">
+        <div id="todo-list" className="list">
             <h2 className="title">Todo</h2>
             <ul>
                 {todoList.map((todo: Todo) => {

@@ -53,3 +53,14 @@ header h1{
     border-bottom:1px solid #f1f1f1;
     padding:0 0 10px 0;
 }
+
+.list ul{
+    list-style: none;
+    padding:0;
+    margin-left:10px;
+}
+
+.list ul li{
+    list-style-type:none;
+    margin:5px 0;
+}

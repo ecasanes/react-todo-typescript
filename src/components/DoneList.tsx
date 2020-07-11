@@ -12,7 +12,7 @@ export default function DoneList({list}:DoneListProps) {
     });
 
     return (
-        <div id="done-list">
+        <div id="done-list" className="list">
             <h2 className="title">Done</h2>
             <ul>
                 {doneList.map((todo: Todo, index) => {
