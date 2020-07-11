@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { v4 as uuid } from 'uuid';
 import Header from './components/Header';
 import DoneList from './components/DoneList';
 import TodoInput from './components/TodoInput';
@@ -19,25 +20,16 @@ export interface ITodo {
 
 export class Todo implements ITodo {
 
+  id: any;
   description: string;
   isDone: boolean;
 
-  constructor(description?: string, isDone?: boolean){
-
-      if(typeof description === 'undefined' || description === null){
-          this.description = '';
-      }else{
-          this.description = description;
-      }
-      
-      
-      if(typeof isDone === 'undefined' || isDone === null){
-          this.isDone = false;
-      }else{
-          this.isDone = isDone;
-      }
-      
+  constructor(description: string = '', isDone: boolean = false){
+      this.id = uuid();
+      this.description = description;
+      this.isDone = isDone;
   }
+
 
 }
 

@@ -12,24 +12,24 @@ export default function TodoList({list, setTodos}:TodoListProps) {
         return !todo.isDone;
     })
 
-    function updateChecked(index: number, todo: Todo){
-        const newList = list.map(l => Object.assign({}, l));
+    function updateChecked(todo: Todo){
+        // const newList = list.map(l => Object.assign({}, l));
         console.log('current todo: ', todo);
         todo.isDone = !todo.isDone;
-        newList[index] = todo;
+        list[todo.id] = todo;
         console.log('current list after update: ', list);
-        setTodos(newList)
+        setTodos([...list])
     }
 
     return (
         <div id="todo-list">
             <h2>Todo</h2>
             <ul>
-                {todoList.map((todo: Todo, index) => {
+                {todoList.map((todo: Todo) => {
                     return (
-                        <li key={index}>
+                        <li key={todo.id}>
                             <input type="checkbox" defaultChecked={todo.isDone} onChange={(e) => {
-                                updateChecked(index, todo);
+                                updateChecked(todo);
                             }} />
                             {todo.description}
                         </li>
