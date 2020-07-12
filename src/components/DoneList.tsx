@@ -1,31 +1,11 @@
 import React from 'react';
-import {Todo} from '../App';
 
-interface DoneListProps {
-    list: Todo[]
-}
-
-export default function DoneList({list}:DoneListProps) {
-
-    let doneList: Todo[] = list.filter((todo: Todo) => {
-        return todo.isDone;
-    });
+export default function DoneList() {
 
     return (
-        <div id="done-list" className="list">
-            <h2 className="title">Done</h2>
-            <ul>
-                {doneList.map((todo: Todo, index) => {
-                    console.log(index + ': ' + todo.isDone);
-                    return (
-                        <li key={index} style={{textDecoration:'line-through', fontStyle:'italic'}}>
-                            <input type="checkbox" defaultChecked={todo.isDone} disabled/>
-                            {todo.description}
-                        </li>
-                    )
-                })}
-            </ul>
-        </div>
+        <>
+            <p>Done List...</p>
+        </>
     )
 
 }

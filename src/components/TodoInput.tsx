@@ -1,37 +1,11 @@
-import React, { useState } from 'react';
-import { ITodo, Todo } from '../App';
+import React from 'react';
 
-interface TodoInputProps {
-    addTodo: any,
-    list: Todo[]
-}
-
-export default function TodoInput({addTodo, list}:TodoInputProps) {
-
-
-    const todoObj: ITodo = new Todo();
-    const [todo, setTodo] = useState(todoObj);
-
-    function submitTodo(event: React.FormEvent) {
-        // prevent default browser form submit functionality
-        event.preventDefault();
-        
-        addTodo(todo);
-        console.log('todoObj: ', todoObj);
-        setTodo(todoObj);
-        console.log(list);
-    }
-
-    function handleTodoChange(event: React.ChangeEvent<HTMLInputElement>) {
-        setTodo({...todo, description: event.target.value});
-    }
+export default function TodoInput() {
 
     return (
-        <form id="todo-input" onSubmit={submitTodo}>
-            <p>What do you want to do?</p>
-            <input type="text" name="todo" value={todo.description} onChange={handleTodoChange} />
-            <button type="submit">Add</button>
-        </form>
+        <>
+            <p>Todo Input...</p>
+        </>
     )
 
 }
