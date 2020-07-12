@@ -1,11 +1,15 @@
 import React from 'react';
 
-export default function Header() {
+interface HeaderProps {
+    title?: string;
+}
+
+export default function Header({title = 'The Todo List'}: HeaderProps) {
 
     return (
-        <>
-            <p>Header...</p>
-        </>
+        <header>
+            <h1>{title}</h1>
+        </header>
     )
 
 }
