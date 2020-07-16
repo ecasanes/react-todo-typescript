@@ -1,13 +1,14 @@
 import React from 'react';
 import {Todo} from '../App';
+import { connect } from 'react-redux';
 
 interface DoneListProps {
-    list: Todo[]
+    todos: Todo[]
 }
 
-export default function DoneList({list}:DoneListProps) {
+function DoneList({todos}:DoneListProps) {
 
-    let doneList: Todo[] = list.filter((todo: Todo) => {
+    let doneList: Todo[] = todos.filter((todo: Todo) => {
         return todo.isDone;
     });
 
@@ -29,3 +30,12 @@ export default function DoneList({list}:DoneListProps) {
     )
 
 }
+
+const mapStateToProps = (state: any) => ({
+    todos: state.todos
+});
+const mapDispatchToProps = (state: any) => ({
+
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(DoneList);

@@ -1,14 +1,16 @@
 import React from 'react';
 import {Todo} from '../App';
+import { connect } from 'react-redux';
+import { setToDone } from './actions';
 
 interface TodoListProps {
-    list: Todo[],
-    setTodos(todos: Todo[]):void
+    todos: Todo[],
+    onItemChecked: any
 }
 
-export default function TodoList({list, setTodos}:TodoListProps) {
+function TodoList({todos, onItemChecked}:TodoListProps,) {
 
-    const todoList = list.filter((todo: Todo) => {
+    const todoList = todos.filter((todo: Todo) => {
         return !todo.isDone;
     })
 
@@ -16,9 +18,9 @@ export default function TodoList({list, setTodos}:TodoListProps) {
         // const newList = list.map(l => Object.assign({}, l));
         console.log('current todo: ', todo);
         todo.isDone = !todo.isDone;
-        list[todo.id] = todo;
-        console.log('current list after update: ', list);
-        setTodos([...list])
+        todos[todo.id] = todo;
+        onItemChecked(todo.id);
+        console.log('current list after update: ', todos);
     }
 
     return (
@@ -40,3 +42,13 @@ export default function TodoList({list, setTodos}:TodoListProps) {
     )
 
 }
+
+const mapStateToProps = (state:any) => ({
+    todos: state.todos
+});
+
+const mapDispatchToProps = (dispatch: any) => ({
+    onItemChecked: (id: any) => dispatch(setToDone(id))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(TodoList);

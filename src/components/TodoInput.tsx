@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import { ITodo, Todo } from '../App';
+import { connect } from 'react-redux';
+import { createTodo } from './actions';
+
+// connect is a higher order function
 
 interface TodoInputProps {
     addTodo: any,
-    list: Todo[]
+    todos: Todo[],
+    onCreatePressed: any
 }
 
-export default function TodoInput({addTodo, list}:TodoInputProps) {
+function TodoInput({addTodo, todos, onCreatePressed}:TodoInputProps) {
 
 
     const todoObj: ITodo = new Todo();
@@ -15,11 +20,11 @@ export default function TodoInput({addTodo, list}:TodoInputProps) {
     function submitTodo(event: React.FormEvent) {
         // prevent default browser form submit functionality
         event.preventDefault();
-        
-        addTodo(todo);
+        const {description} = todo;
+        onCreatePressed(description);
         console.log('todoObj: ', todoObj);
         setTodo(todoObj);
-        console.log(list);
+        console.log(todos);
     }
 
     function handleTodoChange(event: React.ChangeEvent<HTMLInputElement>) {
@@ -35,3 +40,14 @@ export default function TodoInput({addTodo, list}:TodoInputProps) {
     )
 
 }
+
+const mapStateToProps = (state:any) => ({
+    // it automatically maps to component props as todos
+    todos: state.todos
+});
+const mapDispatchToProps = (dispatch:any) => ({
+    // much like map an event
+    onCreatePressed: (description:string) => dispatch(createTodo(description))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(TodoInput);

@@ -53,12 +53,12 @@ function App() {
   return (
     <div>
       <Header />
-      <TodoInput list={todos} addTodo={addTodo} />
+      <TodoInput addTodo={addTodo} />
       <div id="todo-list-container" className="list-container">
-        <TodoList list={todos} setTodos={setTodos} />
+        <TodoList />
       </div>
       <div id="done-list-container" className="list-container">
-        <DoneList list={todos} />
+        <DoneList />
       </div>
     </div>
   );
