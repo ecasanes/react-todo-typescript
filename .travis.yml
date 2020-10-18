@@ -16,5 +16,28 @@ script:
   # all travis cares about is the status code that returns
   - docker run -e CI=true ecasanes/react-todo-typescript npm run test
 
+deploy:
+  # tell Travis CI how to take our application and deploy to AWS
+  # there are multiple providers we can choose from to which we can deploy
+  # e.g. digital ocean, AWS
+  provider: elasticbeanstalk
+  region: "ap-southeast-1"
+  app: "docker-react-todo-typescript"
+  env: "DockerReactTodoTypescript-env"
+  bucket_name: "elasticbeanstalk-ap-southeast-1-962251588189"
+  bucket_path: "docker-react-todo-typescript"
+  on:
+    # only when someone pushed code to master - that's the time it is deployed
+    branch: master
+  access_key_id: "$AWS_ACCESS_KEY"
+  secret_access_key: 
+    secure: "$AWS_SECRET_KEY"
+
+  # note for AWS
+  # create IAM user programatic
+  # attach elasticbeanstalk full access
+  # get keys
+  # use Travis key management (environment variables)
+
 # script
 #   - docker run -e CI=true ecasanes/react-todo-typescript npm run test
