@@ -1,0 +1,737 @@
+Compiled successfully!
+
+You can now view react-todo-typescript in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://172.17.0.2:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+^C%                                                                                                                                                                                         
+ecasanes@Ernests-Macbook-Pro reactproject % git status
+On branch feature-docker
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   package.json
+
+ecasanes@Ernests-Macbook-Pro reactproject % docker-compose up
+Creating network "reactproject_default" with the default driver
+Building web
+Step 1/6 : FROM node:alpine
+ ---> 87e4e57acaa5
+Step 2/6 : WORKDIR '/app'
+ ---> Using cache
+ ---> ed120d0d109d
+Step 3/6 : COPY package.json ./
+ ---> 6470b7daaba8
+Step 4/6 : RUN npm install
+ ---> Running in 2628b83daf1c
+npm WARN deprecated eslint-loader@3.0.3: This loader has been deprecated. Please use eslint-webpack-plugin
+npm WARN deprecated urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
+npm WARN deprecated chokidar@2.1.8: Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies.
+npm WARN deprecated resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
+npm WARN deprecated @types/testing-library__dom@7.5.0: This is a stub types definition. testing-library__dom provides its own type definitions, so you do not need this installed.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated request-promise-native@1.0.9: request-promise-native has been deprecated because it extends the now deprecated request package, see https://github.com/request/request/issues/3142
+npm WARN deprecated fsevents@1.2.13: fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2.
+npm WARN deprecated @hapi/joi@15.1.1: joi is leaving the @hapi organization and moving back to 'joi' (https://github.com/sideway/joi/issues/2411)
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated @hapi/topo@3.1.6: This version has been deprecated and is no longer supported or maintained
+npm WARN deprecated @hapi/address@2.1.4: This version has been deprecated and is no longer supported or maintained
+npm WARN deprecated @hapi/bourne@1.3.2: This version has been deprecated and is no longer supported or maintained
+npm WARN deprecated @hapi/hoek@8.5.1: This version has been deprecated and is no longer supported or maintained
+npm WARN deprecated left-pad@1.3.0: use String.prototype.padStart()
+npm WARN deprecated core-js@2.6.11: core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3.
+
+> core-js@2.6.11 postinstall /app/node_modules/babel-runtime/node_modules/core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+
+Thank you for using core-js ( https://github.com/zloirock/core-js ) for polyfilling JavaScript standard library!
+
+The project needs your help! Please consider supporting of core-js on Open Collective or Patreon: 
+> https://opencollective.com/core-js 
+> https://www.patreon.com/zloirock 
+
+Also, the author of core-js ( https://github.com/zloirock ) is looking for a good job -)
+
+
+> core-js@3.6.5 postinstall /app/node_modules/core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+
+Thank you for using core-js ( https://github.com/zloirock/core-js ) for polyfilling JavaScript standard library!
+
+The project needs your help! Please consider supporting of core-js on Open Collective or Patreon: 
+> https://opencollective.com/core-js 
+> https://www.patreon.com/zloirock 
+
+Also, the author of core-js ( https://github.com/zloirock ) is looking for a good job -)
+
+
+> core-js-pure@3.6.5 postinstall /app/node_modules/core-js-pure
+> node -e "try{require('./postinstall')}catch(e){}"
+
+Thank you for using core-js ( https://github.com/zloirock/core-js ) for polyfilling JavaScript standard library!
+
+The project needs your help! Please consider supporting of core-js on Open Collective or Patreon: 
+> https://opencollective.com/core-js 
+> https://www.patreon.com/zloirock 
+
+Also, the author of core-js ( https://github.com/zloirock ) is looking for a good job -)
+
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules/react-scripts/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.2.7 (node_modules/jest-haste-map/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN notsup Unsupported engine for watchpack-chokidar2@2.0.0: wanted: {"node":"<8.10.0"} (current: {"node":"14.13.1","npm":"6.14.8"})
+npm WARN notsup Not compatible with your version of node/npm: watchpack-chokidar2@2.0.0
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.2.7 (node_modules/watchpack-chokidar2/node_modules/chokidar/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.2.7 (node_modules/webpack-dev-server/node_modules/chokidar/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
+added 1655 packages from 831 contributors and audited 1662 packages in 134.877s
+
+72 packages are looking for funding
+  run `npm fund` for details
+
+found 2 vulnerabilities (1 low, 1 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+Removing intermediate container 2628b83daf1c
+ ---> 79e537f1145e
+Step 5/6 : COPY ./ ./
+ ---> 7a1ec3a9c307
+Step 6/6 : CMD ["npm", "run", "start"]
+ ---> Running in 6cbf6b6a416a
+Removing intermediate container 6cbf6b6a416a
+ ---> efa143b52e12
+
+Successfully built efa143b52e12
+Successfully tagged reactproject_web:latest
+WARNING: Image for service web was built because it did not already exist. To rebuild this image you must use `docker-compose build` or `docker-compose up --build`.
+Creating reactproject_web_1 ... done
+Attaching to reactproject_web_1
+web_1  | 
+web_1  | > react-todo-typescript@0.1.0 start /app
+web_1  | > react-scripts start
+web_1  | 
+web_1  | ℹ ｢wds｣: Project is running at http://172.21.0.2/
+web_1  | ℹ ｢wds｣: webpack output is served from 
+web_1  | ℹ ｢wds｣: Content not from webpack is served from /app/public
+web_1  | ℹ ｢wds｣: 404s will fallback to /
+web_1  | Starting the development server...
+web_1  | 
+reactproject_web_1 exited with code 0
+ecasanes@Ernests-Macbook-Pro reactproject % docker-compose up
+Recreating reactproject_web_1 ... done
+Attaching to reactproject_web_1
+web_1  | 
+web_1  | > react-todo-typescript@0.1.0 start /app
+web_1  | > react-scripts start
+web_1  | 
+web_1  | ℹ ｢wds｣: Project is running at http://172.21.0.2/
+web_1  | ℹ ｢wds｣: webpack output is served from 
+web_1  | ℹ ｢wds｣: Content not from webpack is served from /app/public
+web_1  | ℹ ｢wds｣: 404s will fallback to /
+web_1  | Starting the development server...
+web_1  | 
+web_1  | Compiled successfully!
+web_1  | 
+web_1  | You can now view react-todo-typescript in the browser.
+web_1  | 
+web_1  |   Local:            http://localhost:3000
+web_1  |   On Your Network:  http://172.21.0.2:3000
+web_1  | 
+web_1  | Note that the development build is not optimized.
+web_1  | To create a production build, use npm run build.
+web_1  | 
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping reactproject_web_1   ... done
+ecasanes@Ernests-Macbook-Pro reactproject % docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+ecasanes@Ernests-Macbook-Pro reactproject % docker image ls
+REPOSITORY               TAG                 IMAGE ID            CREATED             SIZE
+reactproject_web         latest              efa143b52e12        2 minutes ago       421MB
+ecasanes/reactproject1   latest              3bfbf64aeb18        10 hours ago        421MB
+<none>                   <none>              580146594258        10 hours ago        421MB
+<none>                   <none>              4614bf19cee2        10 hours ago        632MB
+nodevisits_node-app      latest              187d6917e5ab        19 hours ago        121MB
+<none>                   <none>              27c6e598a2c2        19 hours ago        121MB
+ecasanes/node-visits     0.0.1               7b5e335a89dd        20 hours ago        121MB
+ecasanes/node-simple     0.0.2               85dcd2ae6d05        22 hours ago        120MB
+redis                    latest              bd571e6529f3        4 days ago          104MB
+ecasanes/node-simple     0.0.1               3671d58912cd        4 days ago          120MB
+ecasanes/node            0.0.1               d89b0e464721        4 days ago          117MB
+node                     alpine              87e4e57acaa5        9 days ago          117MB
+busybox                  latest              6858809bf669        5 weeks ago         1.23MB
+alpine                   latest              a24bb4013296        4 months ago        5.57MB
+hello-world              latest              bf756fb1ae65        9 months ago        13.3kB
+ecasanes@Ernests-Macbook-Pro reactproject % docker container ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+ecasanes@Ernests-Macbook-Pro reactproject % docker image ps
+
+Usage:  docker image COMMAND
+
+Manage images
+
+Commands:
+  build       Build an image from a Dockerfile
+  history     Show the history of an image
+  import      Import the contents from a tarball to create a filesystem image
+  inspect     Display detailed information on one or more images
+  load        Load an image from a tar archive or STDIN
+  ls          List images
+  prune       Remove unused images
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rm          Remove one or more images
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+
+Run 'docker image COMMAND --help' for more information on a command.
+ecasanes@Ernests-Macbook-Pro reactproject % docker image ps
+
+Usage:  docker image COMMAND
+
+Manage images
+
+Commands:
+  build       Build an image from a Dockerfile
+  history     Show the history of an image
+  import      Import the contents from a tarball to create a filesystem image
+  inspect     Display detailed information on one or more images
+  load        Load an image from a tar archive or STDIN
+  ls          List images
+  prune       Remove unused images
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rm          Remove one or more images
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+
+Run 'docker image COMMAND --help' for more information on a command.
+ecasanes@Ernests-Macbook-Pro reactproject % docker image ps
+
+Usage:  docker image COMMAND
+
+Manage images
+
+Commands:
+  build       Build an image from a Dockerfile
+  history     Show the history of an image
+  import      Import the contents from a tarball to create a filesystem image
+  inspect     Display detailed information on one or more images
+  load        Load an image from a tar archive or STDIN
+ecasanes@Ernests-Macbook-Pro reactproject % docker image ls
+REPOSITORY               TAG                 IMAGE ID            CREATED             SIZE
+reactproject_web         latest              efa143b52e12        4 minutes ago       421MB
+ecasanes/reactproject1   latest              3bfbf64aeb18        10 hours ago        421MB
+<none>                   <none>              580146594258        11 hours ago        421MB
+<none>                   <none>              4614bf19cee2        11 hours ago        632MB
+nodevisits_node-app      latest              187d6917e5ab        19 hours ago        121MB
+<none>                   <none>              27c6e598a2c2        19 hours ago        121MB
+ecasanes/node-visits     0.0.1               7b5e335a89dd        20 hours ago        121MB
+ecasanes/node-simple     0.0.2               85dcd2ae6d05        22 hours ago        120MB
+redis                    latest              bd571e6529f3        4 days ago          104MB
+ecasanes/node-simple     0.0.1               3671d58912cd        4 days ago          120MB
+ecasanes/node            0.0.1               d89b0e464721        4 days ago          117MB
+node                     alpine              87e4e57acaa5        9 days ago          117MB
+busybox                  latest              6858809bf669        5 weeks ago         1.23MB
+ecasanes@Ernests-Macbook-Pro reactproject % docker-compose build
+Building web
+Step 1/6 : FROM node:alpine
+ ---> 87e4e57acaa5
+Step 2/6 : WORKDIR '/app'
+ ---> Using cache
+ ---> ed120d0d109d
+Step 3/6 : COPY package.json ./
+ ---> Using cache
+ ---> 6470b7daaba8
+Step 4/6 : RUN npm install
+ ---> Using cache
+ ---> 79e537f1145e
+Step 5/6 : COPY ./ ./
+ ---> b73013e44b9d
+Step 6/6 : CMD ["npm", "run", "start"]
+ ---> Running in 66bbbdee73e4
+Removing intermediate container 66bbbdee73e4
+ ---> f50bc57dbfd4
+
+Successfully built f50bc57dbfd4
+Successfully tagged ecasanes/reactproject1:latest
+ecasanes@Ernests-Macbook-Pro reactproject % docker image ps
+
+Usage:  docker image COMMAND
+
+Manage images
+
+Commands:
+  build       Build an image from a Dockerfile
+  history     Show the history of an image
+  import      Import the contents from a tarball to create a filesystem image
+  inspect     Display detailed information on one or more images
+  load        Load an image from a tar archive or STDIN
+  ls          List images
+  prune       Remove unused images
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rm          Remove one or more images
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+
+Run 'docker image COMMAND --help' for more information on a command.
+ecasanes@Ernests-Macbook-Pro reactproject % docker image ls
+REPOSITORY               TAG                 IMAGE ID            CREATED             SIZE
+ecasanes/reactproject1   latest              f50bc57dbfd4        13 seconds ago      421MB
+reactproject_web         latest              efa143b52e12        8 minutes ago       421MB
+<none>                   <none>              3bfbf64aeb18        10 hours ago        421MB
+<none>                   <none>              580146594258        11 hours ago        421MB
+<none>                   <none>              4614bf19cee2        11 hours ago        632MB
+nodevisits_node-app      latest              187d6917e5ab        19 hours ago        121MB
+ecasanes/node-visits     0.0.1               7b5e335a89dd        21 hours ago        121MB
+ecasanes/node-simple     0.0.2               85dcd2ae6d05        22 hours ago        120MB
+redis                    latest              bd571e6529f3        4 days ago          104MB
+ecasanes/node-simple     0.0.1               3671d58912cd        4 days ago          120MB
+ecasanes/node            0.0.1               d89b0e464721        4 days ago          117MB
+node                     alpine              87e4e57acaa5        9 days ago          117MB
+busybox                  latest              6858809bf669        5 weeks ago         1.23MB
+alpine                   latest              a24bb4013296        4 months ago        5.57MB
+hello-world              latest              bf756fb1ae65        9 months ago        13.3kB
+ecasanes@Ernests-Macbook-Pro reactproject % docker image rm reactproject_web
+Error response from daemon: conflict: unable to remove repository reference "reactproject_web" (must force) - container 2239cd2f4104 is using its referenced image efa143b52e12
+ecasanes@Ernests-Macbook-Pro reactproject % docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+ecasanes@Ernests-Macbook-Pro reactproject % docker system prune
+WARNING! This will remove:
+  - all stopped containers
+  - all networks not used by at least one container
+  - all dangling images
+  - all dangling build cache
+
+Are you sure you want to continue? [y/N] y
+Deleted Containers:
+2239cd2f4104bb59242909cacd7e600ad48fb94d217f4283c77638223065cbbc
+c48b22dfcf190e83d289e70c0305c9ddf304a6e9c7cd5313c7cf798eb130d239
+ce2dd814c9f8285496207205702d0b6514b018da2b2323bd61c9e1dd4d92d3fa
+bc232d3de974cd915d8f91a221a4a736e1d4cbbc4ec079e1d743f3633032bde3
+67ca3bf31213ba551dfd8d96d96fe533fb997181eb8943be3b2941667cabec3a
+7c90249dafc6590f68339070de8c94e82edd58d22740054a7cfc6f2bb3e8bc39
+3c00de6a743f4c536fdacc921149feae93c7f591ca63768775db2eb3aaee7928
+4b9f4896872b811e5d5c52f36a40e319e5bbfe2a7bb954c6b5f14bd0409d512e
+c22b36cd109a4eb99ff2eadeb27cc56cf7e99a65f1142d919a1426eb550e3b4d
+336af12d623e877540e60f6a04c2acd24eaba77392f47a8847448fcca441c5af
+f63b892cf04732ab7ecf97c1e86e23ea4149de8248f8956647d26b1e178d6bef
+bcf94d4ddf3a9ea7d30298e81228dfaac0c4c39562cce1019a7f905a9344fc09
+5ebd54790131de727280915d1c78d83c842f112f985ad1b4da5e64b958a4441b
+f70eb9147bda28af6f5dcb08fc6ff4b2d03877b81fd93fddc1f5a4cd23fa6ea2
+5eed90af1a857792508fc2934adc3a1c15075fdab03e025fb0008295303eb9dc
+904416d19bcf8b391ade8c4e687fa8ac9c21b2a5756ae21e2b99dabd959d92c5
+7a71e15ecc0460da61604577237e910d12d0f24df3f9d0ad2d913522feed25f9
+95ca298963bacb77d73c44fdf553bcaf3b8eca9f5399689e98bd5b8e81f79993
+7d7189bf5a2632ff6e7dc1ba7b99247bff55b158941360cf9b66926350ab2ce7
+
+Deleted Networks:
+reactproject_default
+nodevisits_default
+
+Deleted Images:
+deleted: sha256:5801465942589712ef53444f0a3df74f08acc6731c5482497629a7109d7bcdbd
+deleted: sha256:85564fb0bee0224e1e84029f51f5d1529c7029b3262449c67f6e7426018a8c18
+deleted: sha256:8ee7dc56d065ff30cdd1e90b5cc92f2ad9090c90204ead310854db4b4b9f3971
+deleted: sha256:3bfbf64aeb18edcc380af03ff0ee9630e57298c1b85a77d8de064a146e42589d
+deleted: sha256:05916b481e7d3e951421a42d47f71fed89796abed6d4076499811a6f9fa6c340
+deleted: sha256:b04c5909e896ff4c0131420340ec69a5777100f100a7dbe986fd96af0d0c18a8
+deleted: sha256:e2fd6b8edf16031fe638695425d363bf34c7b321e8e739017a9300c97c963544
+deleted: sha256:45c986df1ac35a45a7471b8baa388d24476badd490ec5b8287501e2ba2788574
+deleted: sha256:8232c28fd233b154888ddeb0f63a2ad12d9b1380ddb7aca20b2441da4226306c
+deleted: sha256:f562b99646bb197dbb42cc7ac7cfab03cdd40f97e74b01a5ea6f29103833532b
+deleted: sha256:4614bf19cee27dcbbcef6d6fc6540a87dce02ccdd0059d502e80841394c66cd2
+deleted: sha256:f3f7d67e63775af1bc6b6ec42ca3a7412a9c3a1cee835ab2c7548122ea872dbc
+deleted: sha256:0b0c3c7fabde42d53948d351408ef2832d911d0dc021cd3e58e8e6b96aa988aa
+deleted: sha256:ff1e0490cdb95b99bd7f3344f2c1e17f1f709490ae00dfcb8f609b66c8e29b14
+deleted: sha256:d42b9ecd419ab5979ed60e3ec87de6d84554a2705ff0ca5f4f105cedd6b068d4
+deleted: sha256:a430d34993d92545972aa2d79f4c7b720ee08ff10ceec7738059c62cc6daa72f
+deleted: sha256:4d3e0e3e061ba071846eceb4db51317fd49f14d1487c359d87d27afe459c1568
+
+Total reclaimed space: 825MB
+ecasanes@Ernests-Macbook-Pro reactproject % docker image ps
+
+Usage:  docker image COMMAND
+
+Manage images
+
+Commands:
+  build       Build an image from a Dockerfile
+  history     Show the history of an image
+  import      Import the contents from a tarball to create a filesystem image
+  inspect     Display detailed information on one or more images
+  load        Load an image from a tar archive or STDIN
+  ls          List images
+  prune       Remove unused images
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rm          Remove one or more images
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+
+Run 'docker image COMMAND --help' for more information on a command.
+ecasanes@Ernests-Macbook-Pro reactproject % docker image ls
+REPOSITORY               TAG                 IMAGE ID            CREATED              SIZE
+ecasanes/reactproject1   latest              f50bc57dbfd4        About a minute ago   421MB
+reactproject_web         latest              efa143b52e12        9 minutes ago        421MB
+nodevisits_node-app      latest              187d6917e5ab        19 hours ago         121MB
+ecasanes/node-visits     0.0.1               7b5e335a89dd        21 hours ago         121MB
+ecasanes/node-simple     0.0.2               85dcd2ae6d05        22 hours ago         120MB
+redis                    latest              bd571e6529f3        4 days ago           104MB
+ecasanes/node-simple     0.0.1               3671d58912cd        4 days ago           120MB
+ecasanes/node            0.0.1               d89b0e464721        4 days ago           117MB
+node                     alpine              87e4e57acaa5        9 days ago           117MB
+busybox                  latest              6858809bf669        5 weeks ago          1.23MB
+alpine                   latest              a24bb4013296        4 months ago         5.57MB
+hello-world              latest              bf756fb1ae65        9 months ago         13.3kB
+ecasanes@Ernests-Macbook-Pro reactproject % docker image ls
+REPOSITORY               TAG                 IMAGE ID            CREATED              SIZE
+ecasanes/reactproject1   latest              f50bc57dbfd4        About a minute ago   421MB
+reactproject_web         latest              efa143b52e12        10 minutes ago       421MB
+nodevisits_node-app      latest              187d6917e5ab        19 hours ago         121MB
+ecasanes/node-visits     0.0.1               7b5e335a89dd        21 hours ago         121MB
+ecasanes/node-simple     0.0.2               85dcd2ae6d05        22 hours ago         120MB
+redis                    latest              bd571e6529f3        4 days ago           104MB
+ecasanes/node-simple     0.0.1               3671d58912cd        4 days ago           120MB
+ecasanes/node            0.0.1               d89b0e464721        4 days ago           117MB
+node                     alpine              87e4e57acaa5        9 days ago           117MB
+busybox                  latest              6858809bf669        5 weeks ago          1.23MB
+alpine                   latest              a24bb4013296        4 months ago         5.57MB
+hello-world              latest              bf756fb1ae65        9 months ago         13.3kB
+ecasanes@Ernests-Macbook-Pro reactproject % docker system prune -a
+WARNING! This will remove:
+  - all stopped containers
+  - all networks not used by at least one container
+  - all images without at least one container associated to them
+  - all build cache
+
+Are you sure you want to continue? [y/N] y
+Deleted Images:
+untagged: ecasanes/node:0.0.1
+deleted: sha256:d89b0e4647210ef137217043f238efa68907561bd4c2ef9df9e27ea7f2e78455
+deleted: sha256:fe7a3c9ceb20096ebf35989619f99ce9cb80593a2c949fbf5af0a6be8299df0a
+deleted: sha256:85ec5bd65a3a5e57215c7ef7c0c4e51f3f3beb9fd5e8c151bdbb9973e83e6d79
+untagged: alpine:latest
+untagged: alpine@sha256:185518070891758909c9f839cf4ca393ee977ac378609f700f60a771a2dfe321
+deleted: sha256:a24bb4013296f61e89ba57005a7b3e52274d8edd3ae2077d04395f806b63d83e
+deleted: sha256:50644c29ef5a27c9a40c393a73ece2479de78325cae7d762ef3cdc19bf42dd0a
+untagged: ecasanes/reactproject1:latest
+deleted: sha256:f50bc57dbfd4496eb38f69f63b465adbe2930be4f7eea9554196e34c09537c58
+deleted: sha256:b73013e44b9dbfecfc8f155a2c63430dd6bd88cbe66e40567253035cc69ad7ac
+deleted: sha256:89d5291ee032b065248d081bd52fabfcccd436266c5e837412a3d0d7453727bb
+untagged: busybox:latest
+untagged: busybox@sha256:d366a4665ab44f0648d7a00ae3fae139d55e32f9712c67accd604bb55df9d05a
+deleted: sha256:6858809bf669cc5da7cb6af83d0fae838284d12e1be0182f92f6bd96559873e3
+deleted: sha256:be8b8b42328a15af9dd6af4cba85821aad30adde28d249d1ea03c74690530d1c
+untagged: redis:latest
+untagged: redis@sha256:33ca074e6019b451235735772a9c3e7216f014aae8eb0580d7e94834fe23efb3
+deleted: sha256:bd571e6529f32461648680c82e2540f9db4b3bb92709ae5d19dd347531c98f19
+deleted: sha256:71cd1c5c04a6eabc13c7cf5101614020ea9cb570ea68ccab75e81c0ec24f71b1
+deleted: sha256:40422b77eb394bbe07b282f39617f4eb660e815106efedc82db6558ea17c4153
+deleted: sha256:fbd20c123a782173c46f28d3765ea9da269bb2048c157dafd3edaabfb4fe8fa7
+deleted: sha256:a8f09c4919857128b1466cc26381de0f9d39a94171534f63859a662d50c396ca
+deleted: sha256:2ae5fa95c0fce5ef33fbb87a7e2f49f2a56064566a37a83b97d3f668c10b43d6
+deleted: sha256:d0fe97fa8b8cefdffcef1d62b65aba51a6c87b6679628a2b50fc6a7a579f764c
+untagged: ecasanes/node-simple:0.0.1
+deleted: sha256:3671d58912cde52beafd70c68d9f0fc7373f6cdea540c197ed39674e8bcdb889
+deleted: sha256:76684320dcde5b12493e8d19ff4ea520535d456088c1154513131a88ec345990
+deleted: sha256:9fa2720c6f739faa25cb446debd015dccf0661d1fe7c0f99da9169726aa0b88d
+deleted: sha256:db9276f9a619680e7c892b29d2c3e4fed208b2898da493adc2d6cc9076f1938e
+deleted: sha256:57312a1d5ff27a0855cbb256166bbfe56bb7e5ddc4ad03745e39f3cf598ee065
+untagged: reactproject_web:latest
+deleted: sha256:efa143b52e12fb5a5a791846c474f8cbd51cf73615d09877516204b11d8b957a
+deleted: sha256:7a1ec3a9c307713873b1df005cf702e90d1825e415f9265387d69bee6a3a1dd4
+deleted: sha256:522eefc6eaaa2dbb5d7f22989e984c2a24d4fcd87a727c0ff88ce7e7f878387f
+deleted: sha256:79e537f1145e901a6c427f203a12fd2e2d7f2eedd8b4fa65d1572bd78cec79af
+deleted: sha256:44724526be77cad10ead268f75273d701c90d2cde0f7e3ea460a9017bb20736b
+deleted: sha256:6470b7daaba8fc9ada6923e680eff3110f5d10c09d02f6b9a18ccbdb0b7cd1af
+deleted: sha256:0ead60b540588edcfbe30bc90e591c42046dc60165b60a21263a2a0969806ffd
+deleted: sha256:ed120d0d109d059c3f4ff4a7cf5fc77d29400ecd8bc6e094a30098d093732ba1
+deleted: sha256:061929473f78c150f62a9c4ae1c0fce2a956950cef74b6cca2b1f725bea175d4
+untagged: node:alpine
+untagged: node@sha256:0f8634b451a9e88e1e920ea1ddf931156efca89bc22494d9a2a7a505f14e9abd
+untagged: ecasanes/node-simple:0.0.2
+deleted: sha256:85dcd2ae6d0535755a0ea075c19ffc7a9ebf243d9a9f66b83ff1ddd1c0daa47d
+deleted: sha256:cace92cbbdcd9fb665dab6031be3bced78c72745cd4f9cc50dc91a4e39c3b40d
+deleted: sha256:a00da1f3db3eab951a9a75ca44bd4d9a1cbaf1cf6fb47c78060f44c9a29c84f9
+deleted: sha256:c797781d054efa5f8f05d1d9b778b76ec3523a01d626fcd445ff55b4cb1779e7
+deleted: sha256:768cf869b4cc2dc2a0cae466748072d1a58ee9269f157cc6610f90f315cc045d
+deleted: sha256:3a6410aed9ef170dfc23358c29f0b0885cd074618c408ae5254dee3634445ad8
+deleted: sha256:d6044f14914a38d071ea7cb019be28f82e300f65170e3d117f31797a3ff0864a
+untagged: hello-world:latest
+untagged: hello-world@sha256:4cf9c47f86df71d48364001ede3a4fcd85ae80ce02ebad74156906caff5378bc
+deleted: sha256:bf756fb1ae65adf866bd8c456593cd24beb6a0a061dedf42b26a993176745f6b
+deleted: sha256:9c27e219663c25e0f28493790cc0b88bc973ba3b1686355f221c38a36978ac63
+untagged: nodevisits_node-app:latest
+deleted: sha256:187d6917e5ab3e6d65dee6875ba92a8bc09f2cc285630284ab8de383993eabf8
+deleted: sha256:21a412c095b10a22274b2fb326b94090fb3d0b8cb52aeeb25365c140ba8872ae
+deleted: sha256:0bff24efe05c64bfdc3d34fcb15b40cd25f42a02e3cc081dd481be9aded59ba9
+deleted: sha256:264d4378f3f08d9daf6f98b68b5001147ff914e939c055a835730d5a0ac03d66
+deleted: sha256:342c8cc74113e42bc30c7ad07d45b683f536367622a6540dc5c36240f178eeac
+deleted: sha256:da455889d4b016286e61ee647ed4b8c48847a027cd54ed497071a2a1f7debde5
+deleted: sha256:8035ea8a72fc73d0eac0f0da9c9edc7cbf51711ba7aa7c8fe5fa43e73293d4f1
+untagged: ecasanes/node-visits:0.0.1
+deleted: sha256:7b5e335a89ddabe400807a89eb90274e060a6597937b40b2afff718bf06194e8
+deleted: sha256:f5a20833facd3c326c64d2ac34b4907119dbeb310518585d9232a70f4fd738e4
+deleted: sha256:2bed0764eec1b6492c874ad18cbb16e0210559d55c5f5adb05b295eed8bcbce4
+deleted: sha256:47f2e621b89113bf10c0d4d98c3d28283ba6e45d6e8eeaea860a5e9cb59e5c01
+deleted: sha256:9503c6216a9fae861ee3577fc6644fd335d9ddfdac122acb2eae0ae325c90201
+deleted: sha256:b841c1e4f5a6d8b65b36a63e98c69a3370d23c6e4428f039a224f65a70485ca0
+deleted: sha256:3aab8a3f8eec7d3b6beb1d14e77baa89829e1ea05d706c4997078ef2cb87011c
+deleted: sha256:0dd18b988ad9692582970d6487a486811c7806c5efbf3cdac0d0557ce9e2a349
+deleted: sha256:00921ee1ae4ed608b777f8943078579f3e7e0c91538504b4aefc71f96ca3bfb0
+deleted: sha256:87e4e57acaa53a52c904b020fe2718f39839599a839b3d863900f0e02c13d4d6
+deleted: sha256:97cb32a4b2d492a6ef57c3ae6d26dc4dafa055d220e7fdcc39c4cda53fbfedb2
+deleted: sha256:d63de70c2594be204e40aad78bde6bc38442d3232dd89bfe133cc8cc7c61cfe8
+deleted: sha256:c0d95c3956f089c74bd49a35d83e782ca8771793a21d8894ec3f8db62a43f3c1
+deleted: sha256:3e207b409db364b595ba862cdc12be96dcdad8e36c59a03b7b3b61c946a5741a
+
+Total reclaimed space: 547.7MB
+ecasanes@Ernests-Macbook-Pro reactproject % docker image ls
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ecasanes@Ernests-Macbook-Pro reactproject % docker-compose build
+Building web
+Step 1/6 : FROM node:alpine
+alpine: Pulling from library/node
+cbdbe7a5bc2a: Pull complete
+378c9540b231: Pull complete
+fd5173d17220: Pull complete
+72f138d46980: Pull complete
+Digest: sha256:0ecc7a2d44be1de50bde1e687ca7f89043c2bc23a604a5db3d7f0658363a2f3d
+Status: Downloaded newer image for node:alpine
+ ---> fa2fa5d4e6f4
+Step 2/6 : WORKDIR '/app'
+ ---> Running in 5e123dd29be3
+Removing intermediate container 5e123dd29be3
+ ---> f26e552f0da6
+Step 3/6 : COPY package.json ./
+ ---> 0f26dcb65978
+Step 4/6 : RUN npm install
+ ---> Running in 95ca0bb7478e
+npm WARN deprecated eslint-loader@3.0.3: This loader has been deprecated. Please use eslint-webpack-plugin
+npm WARN deprecated urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
+npm WARN deprecated @types/testing-library__dom@7.5.0: This is a stub types definition. testing-library__dom provides its own type definitions, so you do not need this installed.
+npm WARN deprecated resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
+npm WARN deprecated chokidar@2.1.8: Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies.
+npm WARN deprecated request-promise-native@1.0.9: request-promise-native has been deprecated because it extends the now deprecated request package, see https://github.com/request/request/issues/3142
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated @hapi/joi@15.1.1: joi is leaving the @hapi organization and moving back to 'joi' (https://github.com/sideway/joi/issues/2411)
+npm WARN deprecated fsevents@1.2.13: fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2.
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated @hapi/hoek@8.5.1: This version has been deprecated and is no longer supported or maintained
+npm WARN deprecated @hapi/topo@3.1.6: This version has been deprecated and is no longer supported or maintained
+npm WARN deprecated @hapi/address@2.1.4: This version has been deprecated and is no longer supported or maintained
+npm WARN deprecated @hapi/bourne@1.3.2: This version has been deprecated and is no longer supported or maintained
+npm WARN deprecated left-pad@1.3.0: use String.prototype.padStart()
+npm WARN deprecated core-js@2.6.11: core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3.
+
+> core-js@2.6.11 postinstall /app/node_modules/babel-runtime/node_modules/core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+
+Thank you for using core-js ( https://github.com/zloirock/core-js ) for polyfilling JavaScript standard library!
+
+The project needs your help! Please consider supporting of core-js on Open Collective or Patreon: 
+> https://opencollective.com/core-js 
+> https://www.patreon.com/zloirock 
+
+Also, the author of core-js ( https://github.com/zloirock ) is looking for a good job -)
+
+
+> core-js@3.6.5 postinstall /app/node_modules/core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+
+Thank you for using core-js ( https://github.com/zloirock/core-js ) for polyfilling JavaScript standard library!
+
+The project needs your help! Please consider supporting of core-js on Open Collective or Patreon: 
+> https://opencollective.com/core-js 
+> https://www.patreon.com/zloirock 
+
+Also, the author of core-js ( https://github.com/zloirock ) is looking for a good job -)
+
+
+> core-js-pure@3.6.5 postinstall /app/node_modules/core-js-pure
+> node -e "try{require('./postinstall')}catch(e){}"
+
+Thank you for using core-js ( https://github.com/zloirock/core-js ) for polyfilling JavaScript standard library!
+
+The project needs your help! Please consider supporting of core-js on Open Collective or Patreon: 
+> https://opencollective.com/core-js 
+> https://www.patreon.com/zloirock 
+
+Also, the author of core-js ( https://github.com/zloirock ) is looking for a good job -)
+
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules/react-scripts/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.2.7 (node_modules/jest-haste-map/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN notsup Unsupported engine for watchpack-chokidar2@2.0.0: wanted: {"node":"<8.10.0"} (current: {"node":"14.14.0","npm":"6.14.8"})
+npm WARN notsup Not compatible with your version of node/npm: watchpack-chokidar2@2.0.0
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.2.7 (node_modules/watchpack-chokidar2/node_modules/chokidar/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.2.7 (node_modules/webpack-dev-server/node_modules/chokidar/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
+added 1655 packages from 831 contributors and audited 1662 packages in 115.884s
+
+72 packages are looking for funding
+  run `npm fund` for details
+
+found 2 vulnerabilities (1 low, 1 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+Removing intermediate container 95ca0bb7478e
+ ---> 413f72571115
+Step 5/6 : COPY ./ ./
+ ---> 434eae4bb2cc
+Step 6/6 : CMD ["npm", "run", "start"]
+ ---> Running in f39466031e12
+Removing intermediate container f39466031e12
+ ---> 69852be8433a
+
+Successfully built 69852be8433a
+Successfully tagged ecasanes/reactproject1:latest
+ecasanes@Ernests-Macbook-Pro reactproject % docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+ecasanes@Ernests-Macbook-Pro reactproject % docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+ecasanes@Ernests-Macbook-Pro reactproject % docker image ls
+REPOSITORY               TAG                 IMAGE ID            CREATED             SIZE
+ecasanes/reactproject1   latest              69852be8433a        About an hour ago   421MB
+node                     alpine              fa2fa5d4e6f4        35 hours ago        117MB
+ecasanes@Ernests-Macbook-Pro reactproject % docker-compose up --build
+Creating network "reactproject_default" with the default driver
+Building web
+Step 1/6 : FROM node:alpine
+ ---> fa2fa5d4e6f4
+Step 2/6 : WORKDIR '/app'
+ ---> Using cache
+ ---> f26e552f0da6
+Step 3/6 : COPY package.json ./
+ ---> Using cache
+ ---> 0f26dcb65978
+Step 4/6 : RUN npm install
+ ---> Using cache
+ ---> 413f72571115
+Step 5/6 : COPY ./ ./
+ ---> 1310247cf518
+Step 6/6 : CMD ["npm", "run", "start"]
+ ---> Running in 361668cbc903
+Removing intermediate container 361668cbc903
+ ---> 2efcb219c731
+
+Successfully built 2efcb219c731
+Successfully tagged ecasanes/reactproject1:latest
+Building test
+Step 1/6 : FROM node:alpine
+ ---> fa2fa5d4e6f4
+Step 2/6 : WORKDIR '/app'
+ ---> Using cache
+ ---> f26e552f0da6
+Step 3/6 : COPY package.json ./
+ ---> Using cache
+ ---> 0f26dcb65978
+Step 4/6 : RUN npm install
+ ---> Using cache
+ ---> 413f72571115
+Step 5/6 : COPY ./ ./
+ ---> Using cache
+ ---> 1310247cf518
+Step 6/6 : CMD ["npm", "run", "start"]
+ ---> Using cache
+ ---> 2efcb219c731
+
+Successfully built 2efcb219c731
+Successfully tagged ecasanes/reactproject1:latest
+Creating reactproject_web_1  ... done
+Creating reactproject_test_1 ... done
+Attaching to reactproject_test_1, reactproject_web_1
+test_1  | 
+test_1  | > react-todo-typescript@0.1.0 test /app
+test_1  | > react-scripts test
+test_1  | 
+web_1   | 
+web_1   | > react-todo-typescript@0.1.0 start /app
+web_1   | > react-scripts start
+web_1   | 
+web_1   | ℹ ｢wds｣: Project is running at http://172.22.0.3/
+web_1   | ℹ ｢wds｣: webpack output is served from 
+web_1   | ℹ ｢wds｣: Content not from webpack is served from /app/public
+web_1   | ℹ ｢wds｣: 404s will fallback to /
+web_1   | Starting the development server...
+web_1   | 
+test_1  | PASS src/App.test.js
+test_1  |   ✓ renders learn react link (15ms)
+test_1  | 
+test_1  | Test Suites: 1 passed, 1 total
+test_1  | Tests:       1 passed, 1 total
+test_1  | Snapshots:   0 total
+test_1  | Time:        5.357s
+test_1  | Ran all test suites.
+test_1  | 
+test_1  | PASS src/App.test.js
+test_1  |   ✓ renders learn react link (1ms)
+test_1  |   ✓ renders learn react link (6ms)
+test_1  | 
+test_1  | Test Suites: 1 passed, 1 total
+test_1  | Tests:       2 passed, 2 total
+test_1  | Snapshots:   0 total
+test_1  | Time:        1.109s, estimated 4s
+test_1  | Ran all test suites.
+test_1  | 
+web_1   | Compiled successfully!
+web_1   | 
+web_1   | You can now view react-todo-typescript in the browser.
+web_1   | 
+web_1   |   Local:            http://localhost:3000
+web_1   |   On Your Network:  http://172.22.0.3:3000
+web_1   | 
+web_1   | Note that the development build is not optimized.
+web_1   | To create a production build, use npm run build.
+web_1   | 
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping reactproject_web_1  ... done
+Stopping reactproject_test_1 ... done
+ecasanes@Ernests-Macbook-Pro reactproject % docker-compose up --build
+ecasanes@Ernests-Macbook-Pro reactproject % git branch
+* feature-docker
+  master
+ecasanes@Ernests-Macbook-Pro reactproject % git status
+On branch feature-docker
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   package.json
+        modified:   src/App.test.js
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .termhistory/
+        Dockerfile
+        Dockerfile.dev
+        docker-compose.yml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ecasanes@Ernests-Macbook-Pro reactproject % git status
+On branch feature-docker
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   package.json
+        modified:   src/App.test.js
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .termhistory/
+        Dockerfile
+        Dockerfile.dev
+        docker-compose.yml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ecasanes@Ernests-Macbook-Pro reactproject % 

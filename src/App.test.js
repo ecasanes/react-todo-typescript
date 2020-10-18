@@ -15,3 +15,7 @@ test('renders learn react link', () => {
   }
   expect(true);
 });
+
+test('renders learn react link', () => {
+  expect(true);
+});

@@ -24,7 +24,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "docker-dev": "docker build -f Dockerfile.dev -t ecasanes/reactproject1:latest .",
+    "docker-dev-run": "docker run -it -p 3000:3000 ecasanes/reactproject1:latest",
+    "docker-dev-run-vol": "docker run -it -p 3000:3000 -v /app/node_modules -v '$(pwd):/app' 'ecasanes/reactproject1:latest'"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -1,0 +1,32 @@
+# to build and run --> docker-compose up --build
+#
+
+version: '3'
+services:
+  # there are 2 scenarios to continuously test react app
+  # 1 - docker exec -it <container_id> npm run test
+  # 2 - add second service that solely responsible for the test suite
+  web:
+    image: ecasanes/reactproject1:latest
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - /app/node_modules
+      - .:/app
+    # eactproject_web_1 exited with code 0 - fix
+    stdin_open: true
+  test:
+    image: ecasanes/reactproject1:latest
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /app/node_modules
+      - .:/app
+    # override starting CMD
+    # slightly different notation for yaml for an array
+    command: ["npm","run","test"]
+    stdin_open: true
