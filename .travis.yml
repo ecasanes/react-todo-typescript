@@ -1,0 +1,20 @@
+# we need docker
+# then run Dockerfile.dev to run test
+
+# hey Travis, we need superuser permission
+language: generic
+sudo: required
+services:
+    - docker
+
+# steps before running tests - for our instance
+before_install:
+  - docker build -t ecasanes/react-todo-typescript -f Dockerfile.dev .
+
+script:
+  # this is needed in order to stop after successful test
+  # all travis cares about is the status code that returns
+  - docker run -e CI=true ecasanes/react-todo-typescript npm run test
+
+# script
+#   - docker run -e CI=true ecasanes/react-todo-typescript npm run test
