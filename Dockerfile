@@ -7,6 +7,10 @@ RUN npm run build
 # the folder that we needed is in /app/build/*
 
 FROM nginx
+
+# expose for production deployment for ElasticBeanstalk
+EXPOSE 80
+
 # copy over from previous phase
 COPY --from=builder /app/build /usr/share/nginx/html
 
